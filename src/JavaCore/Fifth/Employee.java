@@ -3,7 +3,7 @@ package JavaCore.Fifth;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements Comparable<Employee>, JavaCore.Sixth.Train.Person {
     //instance fields
     private double salary;
     private LocalDate hireDay;
@@ -30,6 +30,9 @@ public class Employee extends Person {
         salary = s;
     }
 
+    public Employee(String n) {
+        super(n);
+    }
     //other methods
     //字段访问器
 
@@ -104,5 +107,16 @@ public class Employee extends Person {
     public String toString() {
         return getClass().getName() + "[name=" + getName() + ", salary=" + salary + ",hireDay="
                 + hireDay + "]";
+    }
+
+    /**
+     * Compares employees by salary
+     * @param o another Employee object
+     * @return a negative value if this employee has a lower salary than o,
+     * 0 if the salaries are the same, a positive value otherwise
+     */
+    @Override
+    public int compareTo(Employee o) {
+        return Double.compare(salary,o.salary);
     }
 }
