@@ -16,6 +16,8 @@ public class Train2 {
         String minStaff = Collections.min(staff);
         String minStaff2 = Collections.min(staff, Comparator.comparing(String::length));
 
+        String s = "Hello";
+        s.substring(1,5).e
         //复制List
         var staff2 = new ArrayList<String>(staff);
         //Collections.copy(staff2, staff);
