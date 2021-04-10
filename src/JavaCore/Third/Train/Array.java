@@ -2,6 +2,7 @@ package JavaCore.Third.Train;
 
 import java.math.BigInteger;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 
 public class Array {
@@ -65,5 +66,6 @@ public class Array {
         });
 
         String num = "12";
+        Map<String, Function<String, Long>> sorts = new HashMap<>();
     }
 }
