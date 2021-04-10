@@ -19,5 +19,12 @@ public class String1 {
         System.out.println(result);
         all = "PG23";
         System.out.println(all.equals(rating));
+
+        char h = 'A';
+        h = (char) (h + 3);
+        System.out.println(h);
+
+        int i = Integer.parseInt("12");
+        System.out.println(i + 3);
     }
 }

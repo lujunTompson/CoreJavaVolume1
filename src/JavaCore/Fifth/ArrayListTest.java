@@ -17,5 +17,6 @@ public class ArrayListTest {
         //print out information about all Employee objects
         for (Employee e : staff)
             System.out.println(e);
+
     }
 }

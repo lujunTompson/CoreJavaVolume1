@@ -58,3 +58,29 @@ LocalDate hireDay = Objects.requireNonNullOrElseGet(day, () -> new LocalDate(197
 
 如果一个接口只有一个抽象方法，可以用@FunctionalInterface注解来标记这个接口。
 
+### 5.异常处理
+
+常见错误类型：用户输入错误，设备错误，物理限制，代码错误 
+
+对于方法中的错误：返回一个特殊的错误码，如从文件中读取信息的方法，返回-1，表示文件结束；也可以返回null引用 
+
+派生于Error类或RuntimeException类的所有异常称为**非检查型**异常，所有其他异常称为**检查型**异常，检查型异常有**异常处理器**
+
+``` java
+              Throwable
+                  |
+            --------------
+            |            |
+          Error      Exception
+       (unchecked)       |
+                  ---------------
+                  |             |
+             IOException  RuntimeException
+              (checked)      (unchecked)
+```
+
+### 6.捕获异常
+
+- 捕获那些知道如何处理的异常
+
+- 继续传播那些不知道如何处理的异常
